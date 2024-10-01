@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ContactDetailActivity">
+
+    <ImageView
+        android:id="@+id/img_contact_detail"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_margin="16dp"
+        android:contentDescription="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.676"
+        app:layout_constraintStart_toEndOf="@+id/img_contact_detail"
+        app:layout_constraintTop_toTopOf="@+id/img_contact_detail"
+        tools:text="Name" />
+
+    <TextView
+        android:id="@+id/tv_phone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:lines="1"
+        android:text="(55) 47 99874-3216"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/img_contact_detail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tv_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+
+    <ImageButton
+        android:id="@+id/img_call"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_margin="8dp"
+        android:contentDescription="@null"
+        android:background="@drawable/rounded_button_call"
+        android:src="@drawable/ic_call_black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/vertical_guideline"
+        app:layout_constraintTop_toBottomOf="@+id/img_contact_detail" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <ImageButton
+        android:id="@+id/img_delete"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_margin="8dp"
+        android:contentDescription="@null"
+        android:background="@drawable/rounded_button_delete"
+        android:src="@drawable/ic_delete_black"
+        app:layout_constraintEnd_toStartOf="@+id/vertical_guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_contact_detail" />
+
+    <TextView
+        android:id="@+id/tv_send_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:padding="8dp"
+        android:text="Send Message"
+        android:textColor="#0000FF"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/img_call"
+        app:layout_constraintStart_toStartOf="@+id/img_delete"
+        app:layout_constraintTop_toBottomOf="@+id/img_delete" />
+
+    <TextView
+        android:id="@+id/tv_share_contact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:padding="8dp"
+        android:text="Share Contact"
+        android:textColor="#0000FF"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/img_call"
+        app:layout_constraintStart_toStartOf="@+id/img_delete"
+        app:layout_constraintTop_toBottomOf="@+id/tv_send_message" />
+
+    <TextView
+        android:id="@+id/tv_block_contact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:padding="8dp"
+        android:text="Block contact"
+        android:textColor="#FF0000"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/img_call"
+        app:layout_constraintStart_toStartOf="@+id/img_delete"
+        app:layout_constraintTop_toBottomOf="@+id/tv_share_contact" />
+
+    <ImageButton
+        android:id="@+id/img_back"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:text="Back"
+        android:textSize="18sp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/rounded_button_back"
+        android:src="@drawable/ic_back_black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
